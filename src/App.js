@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Routes, Route } from "react-router-dom"
+import Event from './pages/Event'
+import Home from './pages/Home'
+import Create from './pages/Create'
 
-function App() {
+const App = () => {
+  const [form, setForm] = useState({
+    eventName: '', hostName: '', date: '', location: ''
+  })
+  const [selectImage, setSelectImage] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path="event" element={<Event form={form} selectImage={selectImage} />} />
+      <Route path="/*" element={<Home />} />
+      <Route path="create" element={<Create setForm={setForm} form={form} setSelectImage={setSelectImage} />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App

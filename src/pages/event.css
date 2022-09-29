@@ -1,0 +1,112 @@
+.card{
+  
+    width: 375px;
+    height: 375px;
+  
+    margin-bottom: 0.688rem;
+    border-radius: 0px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.event-container{
+    background-color: #F6F2FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.event-head-text{
+
+width: 327px;
+height: 37px;
+
+
+font-family: 'Helvetica';
+font-weight: 700;
+font-size: 28px;
+line-height: 32px;
+
+color: #240D57;
+margin-bottom: 2px;
+}
+
+.event-header-p{
+
+width: 341px;
+height: 15px;
+
+font-family: 'Helvetica';
+
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+color: #828282;
+}
+
+.event-date h3{
+    width: 138px;
+    height: 18px;
+    
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 0;
+    color: #240D57;
+    
+
+} 
+
+.event-date p{
+    
+width: 197px;
+height: 16px;
+margin-top: 0;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: #4F4F4F;
+}
+
+.event-date{
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.event-date-details{
+    flex-direction: column;
+    margin-left: 10px;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.event-card{
+    display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px;
+
+
+
+width: 349.57px;
+height: 64px;
+
+border-radius: 10px;
+
+}
