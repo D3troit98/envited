@@ -2,6 +2,8 @@
 
 This project can be found at [Netlify](https://envited-a9a23f.netlify.app/).
 
+Extra steps were taken as the form is functional and it creates a event page
+based on what you fill in.
 ## Available Scripts
 
 In the project directory, you can run:
