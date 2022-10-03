@@ -17,6 +17,7 @@ const Create = ({ form, setForm, setSelectImage }) => {
     };
 
     const handleChange = (e) => {
+
         setForm((prevFormData) => {
             return {
                 ...prevFormData,
@@ -26,10 +27,12 @@ const Create = ({ form, setForm, setSelectImage }) => {
     }
     return (
         <div className='create-container'>
+
             <h1 className='head-text'>Create
                 <span className='gradient-text'> Your </span>
                 Event
             </h1>
+            <div className="form-container">
             <form>
                 <div>
                     <label htmlFor="eventName" className='labels'>
@@ -38,12 +41,13 @@ const Create = ({ form, setForm, setSelectImage }) => {
                     <input
                         type="text"
                         placeholder='Event Name'
-                        id="eventName"
+                            name="eventName"
                         autoComplete='eventName'
                         className='input_field'
                         required
                         onChange={handleChange}
                         value={form.eventName}
+
                     />
                 </div>
 
@@ -54,7 +58,7 @@ const Create = ({ form, setForm, setSelectImage }) => {
                     <input
                         type="text"
                         placeholder='Host Name'
-                        id="hostName"
+                            name="hostName"
                         autoComplete='hostName'
                         className='input_field'
                         required
@@ -63,30 +67,46 @@ const Create = ({ form, setForm, setSelectImage }) => {
                     />
                 </div>
 
-                <div>
+                    <div className='date-fields'>
+                        <div>
                     <label htmlFor="date" className='labels'>
-                        Start and End time/date
+                                Start time/date
                     </label>
                     <input
                         type="date"
 
-                        id="date"
+                                name="date"
                         autoComplete='date'
                         className='input_field'
                         required
                         onChange={handleChange}
                         value={form.date}
                     />
-                </div>
+                        </div>
+                        <div>
+                            <label htmlFor="endDate" className='labels'>
+                                End time/date
+                            </label>
+                            <input
+                                type="date"
 
+                                name="endDate"
+                                autoComplete='date'
+                                className='input_field'
+                                required
+                                onChange={handleChange}
+                                value={form.endDate}
+                            />
+                        </div>
+                    </div>
                 <div>
                     <label htmlFor="location" className='labels'>
                         Location
                     </label>
                     <input
                         type="text"
-                        placeholder='New Yoir'
-                        id="location"
+                            placeholder='New York'
+                            name="location"
                         autoComplete='location'
                         className='input_field'
                         required
@@ -99,13 +119,14 @@ const Create = ({ form, setForm, setSelectImage }) => {
                     <label htmlFor="avatar" className='labels'>
                         Event photo               </label>
                     <input type="file"
-                        id="avatar" name="avatar"
+                            name="avatar" id="avatar"
                         accept="image/png, image/jpeg"
                         onChange={changeHandler}
                     />
                 </div>
                 <button type="submit" className='create_button' onClick={handleSubmit}> Next</button>
             </form>
+            </div>
         </div>
     )
 }

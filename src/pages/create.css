@@ -1,5 +1,5 @@
 .create-container{
-    background-color: #F6F2FF;
+    background: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,10 +37,13 @@ color: #240D57;
 
 .input_field{
     margin-top: 0.75rem;
-    width: 100%;
+    width: 90%;
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input_field:focus{
@@ -71,4 +74,79 @@ margin-top: 1rem;
 
 }
 
+.date-fields{
+    display: flex;
+    flex-direction: row;
+  gap: 50px;
+    align-items: center;
+}
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-tracks: center;
+   
+}
+
+@media screen and (max-width: 650px)
+{
+    .create-container{
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .form-container{
+        width: 90%;
+        
+    }
+    .input_field{
+        margin-top: 0.5rem;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date-fields{
+        width: 90%;
+        display: flex;
+        flex-direction: row; 
+       justify-content: space-between;
+       gap: 10px;
+     
+    }
+
+    .date-fields input{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 300px){
+    .create-container{
+        height: 100%;
+        padding: 5px;
+    }
+
+    .form-container{
+        width: 80%;
+        
+    }
+    .input_field{
+        margin-top: 0.2rem;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date-fields{
+        width: 80%;
+        display: flex;
+        flex-direction: column; 
+       justify-content: center;
+       gap: 3px;
+     
+    }
+
+    .date-fields input{
+        width: 100%;
+    }
+}

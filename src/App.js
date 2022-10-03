@@ -6,12 +6,13 @@ import Create from './pages/Create'
 
 const App = () => {
   const [form, setForm] = useState({
-    eventName: '', hostName: '', date: '', location: ''
+    eventName: '', hostName: '', date: '', location: '', endDate: ''
   })
   const [selectImage, setSelectImage] = useState();
+  const [imageSource, setImageSource] = useState()
   return (
     <Routes>
-      <Route path="event" element={<Event form={form} selectImage={selectImage} />} />
+      <Route path="event" element={<Event form={form} selectImage={selectImage} imageSource={imageSource} setImageSource={setImageSource} />} />
       <Route path="/*" element={<Home />} />
       <Route path="create" element={<Create setForm={setForm} form={form} setSelectImage={setSelectImage} />} />
     </Routes>

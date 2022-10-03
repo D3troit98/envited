@@ -1,87 +1,136 @@
 .home_container {
-    background-color: #F6F2FF;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+width: 100%;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 .home_logo-image {
-   
-width: 440px;
-height:38rem;
-margin-left: 170px;
-filter: drop-shadow(0px 0px 46.8696px rgba(0, 0, 0, 0.05));
-border-radius: 35.1522px;
+  width: 440px;
+  height: 38rem;
+
+  filter: drop-shadow(0px 0px 46.8696px rgba(0, 0, 0, 0.05));
+  border-radius: 35.1522px;
 }
 
-.home_logo-image img{
-    height: 100%;
-    width: 100%;
+.home_logo-image img {
+  height: 100%;
+  width: 100%;
 }
 
-.home_content-text
-{
-    display: flex;
+.home_content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10rem;
+}
+
+.home_header {
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4rem;
+  /* or 100% */
+  margin-bottom: 0;
+  text-align: right;
+
+  color: #240d57;
+}
+
+.home_gradient_header {
+  background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home_text {
+  font-family: "Helvetica";
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: right;
+  margin-top: 16px;
+  color: #4f4f4f;
+}
+
+.home_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  color: #ffffff;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  width: 320px;
+  height: 55px;
+  background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.medium-screen {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .home_container {
     flex-direction: column;
-    align-items: flex-end;
-    margin-right: 10rem;
-}
+    height: 100%;
+  }
 
-.home_header{
-font-family: 'Helvetica';
-font-weight: 700;
-font-size: 4rem;
-line-height: 4rem;
-/* or 100% */
-margin-bottom: 0;
-text-align: right;
-
-color: #240D57;
-
-}
-
-.home_gradient_header{
-    background: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
-
-
-}
-
-.home_text{
-    font-family: 'Helvetica';
-font-weight: 300;
-font-size: 1.5rem;
-line-height: 1.75rem;
-text-align: right;
-margin-top: 16px;
-color: #4F4F4F;
-}
-
-.home_button{
+  .home_content-text {
     display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 16px;
-gap: 10px;
-color: #FFFFFF;
-font-family: 'Helvetica';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 23px;
-width: 320px;
-height: 55px;
-background: linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%);
-border-radius: 10px;
-cursor: pointer;
-border: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
 
+  .home_text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+  .home_content-text button {
+    margin-top: 40px;
+  }
+
+  .medium-screen {
+    display: flex;
+  }
+  .large-screen {
+    display: none;
+  }
+ 
+  .home_header {
+    font-family: "Helvetica";
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    /* or 100% */
+    text-align: center;
+
+    color: #240d57;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .home_logo-image {
+        width: 100%
+    }
+  
 }
